@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Chantan’s Quarto Website",
+    "section": "",
+    "text": "Title Page"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "fun.html",
+    "href": "fun.html",
+    "title": "Fun",
+    "section": "",
+    "text": "return home\n\n\n\nThis is a bullet point\n\n\n\n\nThis is an\nordered bullet point"
+  },
+  {
+    "objectID": "fun.html#this-is-a-topic-under-the-heading",
+    "href": "fun.html#this-is-a-topic-under-the-heading",
+    "title": "Fun",
+    "section": "",
+    "text": "This is a bullet point\n\n\n\n\nThis is an\nordered bullet point"
+  }
+]
