@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "About this site\n\nheading\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "fun.html",
@@ -32,6 +32,6 @@
     "href": "assignment1.html",
     "title": "Assignment 1",
     "section": "",
-    "text": "This will be Assignment 1 stuff"
+    "text": "Return Home\n\nThis will be Assignment 1 stuff"
   }
 ]
