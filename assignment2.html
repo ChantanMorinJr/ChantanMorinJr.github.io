@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 1 – Chantan’s Quarto Website</title>
+<title>Assignment 2 – Chantan’s Quarto Website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,11 +97,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Fun</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./assignment1.html" aria-current="page"> 
+    <a class="nav-link" href="./assignment1.html"> 
 <span class="menu-text">Assignment 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./assignment2.html"> 
+    <a class="nav-link active" href="./assignment2.html" aria-current="page"> 
 <span class="menu-text">Assignment 2</span></a>
   </li>  
 </ul>
@@ -120,8 +120,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#leaf-of-winter" id="toc-leaf-of-winter" class="nav-link active" data-scroll-target="#leaf-of-winter">Leaf of Winter</a></li>
-  <li><a href="#graphic-critique" id="toc-graphic-critique" class="nav-link" data-scroll-target="#graphic-critique">Graphic Critique</a></li>
+  <li><a href="#happy-planet-plots" id="toc-happy-planet-plots" class="nav-link active" data-scroll-target="#happy-planet-plots">Happy Planet Plots</a></li>
+  <li><a href="#one-page-note" id="toc-one-page-note" class="nav-link" data-scroll-target="#one-page-note">One-Page Note</a></li>
   </ul>
 </nav>
     </div>
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 1</h1>
+<h1 class="title">Assignment 2</h1>
 </div>
 
 
@@ -148,29 +148,24 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><a href="./index.html">Return Home</a></p>
-<section id="leaf-of-winter" class="level1">
-<h1>Leaf of Winter</h1>
-<p>Re-coloring of Leaf of Fall with lightblue</p>
-<div class="quarto-figure quarto-figure-center">
+<section id="happy-planet-plots" class="level1">
+<h1>Happy Planet Plots</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="Leaf of Winter.png" class="img-fluid figure-img"></p>
-<figcaption>Leaf of Winter</figcaption>
+<p><img src="assignment2_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
+</div>
+</div>
 </div>
 </section>
-<section id="graphic-critique" class="level1">
-<h1>Graphic Critique</h1>
-<p>The <a href="https://counciloncj.org/">Council on Criminal Justice</a> is an alleged non-partisan organization that publishes crime statistics in order to better policy and policymakers’ decisions on how to deal with Criminal Justice issues.</p>
-<p>The following graphic was taken from their <a href="https://counciloncj.org/homicide-trends-report/">Homicide Trends Report</a> published in December 2023.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Graphic Critique.png" class="img-fluid figure-img"></p>
-<figcaption>CCJ: Homicide Victimizations by Race and Sex</figcaption>
-</figure>
-</div>
-<p>The first thing the reader will notice when looking at the graphic on the CCJ website is that the graphic is <strong>too large to be seen on the screen in its entirety</strong> without scrolling. There is an option to make the graphic full screen, but that brings to light the second issue: the graphic has <strong>no title connected to it</strong>. The only title the graphic receives is a flush-left, bolded text that is hardly differentiated from the regular text in the article. Compared to the size of the graphic, the title is hardly there.</p>
-<p>Thirdly, the <strong>colors are poorly chosen</strong>. Yellow stands out too little against the white background, and it does not help that it is the smallest bar in the graph. Furthermore, “White Males” is shown by by a purple-ish, nearly black, color compared to the much lighter blue used for “Black Males”. This may cause confusion, as when one thinks of “Black”, they may instinctively look at a darker bar (like with a graph sorted by sex using pink and blue, the reader may instinctively believe the pink means women and blue means male).</p>
-<p>Last, but not least, the <strong>legend is not used in available white space</strong> within the graphic. On the top-right of the graphic, above the last four or five groups, there is plenty of space to put a legend explaining what the colors of the bars represent. It would make the whole graphic smaller and easier to read.</p>
+<section id="one-page-note" class="level1">
+<h1>One-Page Note</h1>
+<p>Based on information from <em>Lazer, Kennedy, King, &amp; Vespignani</em> (2014). <a href="https://www.jstor.org/stable/24743402">The Parable of Google Flu: Traps in Big Data Analysis</a></p>
+<p>According to <em>Ginsberg, Mohebbi, Patel, et al (2009)</em>, the frequency of certain Google search queries is highly correlated with the percentage of physician visits where the patient arrives with flu-like symptoms. This means that it is possible to accurately estimate the amount of influenza activity in the US using the amount of influenza-related search queries. The usual time it takes to respond to outbreaks is 1-2 week with the current surveillance systems. Using Google search queries can cut response time to a day. However, in February 2013, Google Flu Trends was predicting twice the amount of doctor visits for influenza-like illness.</p>
+<p>Big Data Hubris is the assumption that big data are a substitute for traditional data collection analysis, rather than a supplement to it. But more data does not make it more reliable or valid for scientific analysis. GFT was supposed to find the best matches among 50 million search terms to fit 1152 data points <strong>(overparameterization)</strong>, which led to terms related to the CDC but not to the flu being gathered into the estimates. This led to GFT being able to run will on the original data, but not so much on the new data with new searches later on <strong>(overfitting)</strong>. GFT began to constantly overestimate flu prevalence and miss spikes in actual flu cases. This could have been avoided if GFT was used along with more accurate CDC data on a two-week time lag. GFT could then correct itself with the newest CDC data to make more accurate predictions in the future. The inaccuracies, however, may have been on Google’s end, due to their ever-changing search engine, specifically their change to show recommended searches.</p>
+<p>Transparency and replicability is necessary in research. GFT failed to provide the 45 search terms used to make its estimates, so others who want to build or check these methods are left guessing. GFT could also do so much good if it is perfected, giving accurate predictions of the flu week or months ahead of time. Thus, big data analysis should work together with traditional applied statistics to provide a better understanding of reality.</p>
 
 
 </section>
