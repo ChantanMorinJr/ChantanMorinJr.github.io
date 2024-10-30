@@ -9,6 +9,6 @@ author: "Chantan Morin Jr"
 
 This website will be used to:
 
-- turn in my assignments for EPPS 6356
-- familiarize myself with R and Quarto Website building
-- test certain codes and aesthetics
+-   turn in my assignments for EPPS 6356
+-   familiarize myself with R and Quarto Website building
+-   test certain codes and aesthetics
