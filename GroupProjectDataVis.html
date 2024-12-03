@@ -37,7 +37,7 @@
 			 "esri/widgets/Home"], 
 	(Map, MapView, FeatureLayer, Swipe, LayerList, Search, Legend, Home) => {
 		const map = new Map({
-			basemap: "dark-gray"
+			basemap: "terrain"
 		});
 		
 		const RegionsLayer = new FeatureLayer({
@@ -53,16 +53,46 @@
 		});
 		map.add(VTLayer);
 		
+		const ORLayer = new FeatureLayer({
+			url: "https://services2.arcgis.com/VNo0ht0YPXJoI4oE/arcgis/rest/services/Obesity_Rate_Texas_Counties/FeatureServer",
+			title: "Obesity Rate"
+		});
+		map.add(ORLayer);
+		
+		const FILayer = new FeatureLayer({
+			url: "https://services2.arcgis.com/VNo0ht0YPXJoI4oE/arcgis/rest/services/Food_Insecurity_Texas_Counties/FeatureServer",
+			title: "Food Insecurity"
+		});
+		map.add(FILayer);
+		
+		const PHYLayer = new FeatureLayer({
+			url: "https://services2.arcgis.com/VNo0ht0YPXJoI4oE/arcgis/rest/services/Average_Poor_Physical_Health_Days_Texas_Counties/FeatureServer",
+			title: "Avg. Poor Physical Health Days"
+		});
+		map.add(PHYLayer);
+		
+		const PFHLayer = new FeatureLayer({
+			url: "https://services2.arcgis.com/VNo0ht0YPXJoI4oE/arcgis/rest/services/Avg_Reported_Poor_or_Fair_Health_Texas_Counties/FeatureServer",
+			title: "Avg. Reported Poor/Fair Health"
+		});
+		map.add(PFHLayer);
+		
+		const IRLayer = new FeatureLayer({
+			url: "https://services2.arcgis.com/VNo0ht0YPXJoI4oE/arcgis/rest/services/Physical_Inactivity_Rate_Texas_Counties/FeatureServer",
+			title: "Physical Inactivity Rate"
+		});
+		map.add(IRLayer);
+		
 		const view = new MapView({
 			container: "viewSwipe",
 			map: map,
-			zoom: 5,
+			zoom: 6,
 			center: [-98, 31]
 		});
 		
 		const swipe = new Swipe({
-			leadingLayers: [RegionsLayer],
-			trailingLayers: [VTLayer],
+			leadingLayers: [VTLayer],
+			trailingLayers: [RegionsLayer, ORLayer, FILayer, PHYLayer, PFHLayer, IRLayer],
 			direction: "horizontal",
 			position: 50,
 			view: view
@@ -95,7 +125,7 @@
 </script>
 </head>
 <body>
-	<body style="background-color:gray;">
+	<body style="background-color:white;">
 	<div id="viewSwipe"></div>
 </body>
 </html>
