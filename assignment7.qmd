@@ -4,6 +4,8 @@ title: "Assignment 7"
 
 [Return Home](index.qmd)
 
+[Test](GroupProjectDataVis.html)
+
 # Assignment 7 Hackathon 2.0
 
 All data is from the [County Health Ranking 2024 dataset](https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation)

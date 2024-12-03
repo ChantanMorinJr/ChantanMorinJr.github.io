@@ -6,9 +6,12 @@ title: "Assignment 6"
 
 # Assignment 6 -c-
 
-<iframe width="800" height="600" src="https://chantanmorinjr.shinyapps.io/EPPSAssignment6/"></iframe>
+<iframe width="800" height="600" src="https://chantanmorinjr.shinyapps.io/EPPSAssignment6/">
 
+</iframe>
 
 # Assignment 6 -d-
 
-<iframe width="800" height="600" src="https://chantanmorinjr.shinyapps.io/Assignment6d/"></iframe>
+<iframe width="800" height="600" src="https://chantanmorinjr.shinyapps.io/Assignment6d/">
+
+</iframe>

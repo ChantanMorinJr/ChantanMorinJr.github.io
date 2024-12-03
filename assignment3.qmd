@@ -65,6 +65,7 @@ par(op)
 ```
 
 # Part 3
+
 ```{r, warning=FALSE, message=FALSE}
 plot.new()
 par(mfrow = c(2, 2), mar = 0.1+c(4,4,1,1), oma =  c(0, 0, 2, 0), 
@@ -82,6 +83,7 @@ mtext("Chantan's 4 Regression data sets", family="serif", outer = TRUE, cex = 1.
 ```
 
 # Part 4
+
 ```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
 
