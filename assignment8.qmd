@@ -13,7 +13,7 @@ This is also the Final Project .Rmd dashboard
 ## Code
 
 ```{r, echo=TRUE, warning=FALSE, message=FALSE, results='hide', eval=FALSE}
-### Packages and Data
+### Packages and Data Cleaning
 #install.packages("shiny")
 #install.packages("rmarkdown")
 library(plotly)
@@ -29,6 +29,43 @@ library(extrafont)
 library(waffle)
 library(ggpubr)
 loadfonts(device = "win")
+
+dat <- read.csv("analytic_data2024.csv")
+
+# Download County Regions Key
+key <- read_excel("County Regions Key.xlsx")
+
+# Filtering Data to only variables and counties needed
+data_short <- dat[, c(3,4,5,681,536,210,200,205,39,44,49,86,91,437,442,96,711)]
+colnames(data_short) <- c("CountyFIPS", "State", "CountyName", "VoterTurnoutRate", "MedianHouseholdIncome", 
+                          "UnemploymentRate", "HSCompletion", "SomeCollegeEducation", "PoorOrFairHealth", 
+                          "AvgPoorPhysHealthDays", "AvgPoorMentalHealthDays", "ObesityRate", 
+                          "FoodEnviornmentIndex", "FoodInsecurity", "LimitedAccesstoHealthyFoods",
+                          "PhysInactivityRate", "Population")
+data.tx <- data_short %>%
+  filter(State == "TX" & CountyName != "Texas")
+
+# Making new variable to give every county a region using Key
+data.tx <- data.tx %>%
+  mutate(Region = with(key, region[match(CountyName, county)]))
+
+# Setting number columns to numeric (needed for GIS mapping)
+data.tx[4:17] <- lapply(data.tx[4:17], as.numeric)
+
+# Filtering Odd data
+data.tx.filter <- data.tx %>%
+  filter(complete.cases(.)) %>% 
+  filter(VoterTurnoutRate <= .90, SomeCollegeEducation <= 0.95, FoodEnviornmentIndex >= 0.5, 
+         LimitedAccesstoHealthyFoods >= 0.001)
+
+removed.data <- anti_join(data.tx, data.tx.filter, by = names(data.tx))
+removed.data[, -1] <- NA
+data.tx.filter <- bind_rows(data.tx.filter, removed.data)
+# Left with 246 Counties in Texas that have complete and reliable data
+
+# Writing new CSV for data analysis
+#write.csv(data.tx, "CleanProjectData.csv")
+
 data <- read.csv("CleanProjectData.csv")
 region_choices <- c("All", data$Region)
 region_colors <- c("The Panhandle" = "#a82eff", "West Texas" = "#02d914", 
